@@ -13,7 +13,7 @@ sudo pacman -S git stow
 ```
 ## 2.Clone repository
 ```
-git clone [https://github.com/rikuslv/dotfiles.git](https://github.com/rikuslv/dotfiles.git) ~/dotfiles
+git clone https://github.com/rikuslv/dotfiles.git
 
 ```
 ```
