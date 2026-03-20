@@ -28,7 +28,7 @@ Note: If you get "already exists" errors, use stow --adopt */ to link existing f
 ```
 stow --adopt */
 ```
-### Resume
+### Result
 WM: Hyprland
 
 Bar: Waybar (Workspace circles & Pink capsules)
