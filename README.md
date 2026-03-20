@@ -39,6 +39,7 @@ Runner: Rofi / Wofi
 
 Tools: Fastfetch, Btop, Yazi, Wal, Flameshot, Wlogout
 
-<div align="center">
-<video src="showcase.mp4" width="100%" controls autoplay loop muted></video>
-</div>
+##  Showcase
+<p align="center">
+  <video src="showcase.mp4" width="100%" controls autoplay loop muted></video>
+</p>
