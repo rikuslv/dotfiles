@@ -11,12 +11,12 @@ If you are setting this up on a fresh install, follow these steps:
 ```bash
 sudo pacman -S git stow
 
-### 2.Clone repository
+## 2.Clone repository
 
 git clone [https://github.com/rikuslv/dotfiles.git](https://github.com/rikuslv/dotfiles.git) ~/dotfiles
 cd ~/dotfiles
 
-3. Deploy configurations with Stow
+## 3. Deploy configurations with Stow
 
 This command will create symlinks for all folders in this directory:
 
