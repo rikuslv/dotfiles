@@ -14,7 +14,10 @@ sudo pacman -S git stow
 ## 2.Clone repository
 ```
 git clone [https://github.com/rikuslv/dotfiles.git](https://github.com/rikuslv/dotfiles.git) ~/dotfiles
+
+```
 cd ~/dotfiles
+```
 ```
 ## 3. Deploy configurations with Stow
 ```
@@ -23,6 +26,7 @@ This command will create symlinks for all folders in this directory:
 stow */
 Note: If you get "already exists" errors, use stow --adopt */ to link existing files.
 ```
+stow --adopt */
 ```
 WM: Hyprland
 
