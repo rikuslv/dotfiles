@@ -16,8 +16,8 @@ sudo pacman -S git stow
 git clone [https://github.com/rikuslv/dotfiles.git](https://github.com/rikuslv/dotfiles.git) ~/dotfiles
 
 ```
-cd ~/dotfiles
 ```
+cd ~/dotfiles
 ```
 ## 3. Deploy configurations with Stow
 ```
@@ -28,6 +28,7 @@ Note: If you get "already exists" errors, use stow --adopt */ to link existing f
 ```
 stow --adopt */
 ```
+### Resume
 WM: Hyprland
 
 Bar: Waybar (Workspace circles & Pink capsules)
