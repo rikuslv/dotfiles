@@ -1,0 +1,55 @@
+/* English comment: Replaced cyan (#00f2ff) with "Nano Purple" colors.
+ *  Using #8839ef for borders and #c6a0f6 for text/glow effects. */
+
+window {
+    margin: 0px;
+    border: 2px solid #8839ef; /* Violeta apmale */
+    background-color: rgba(15, 15, 15, 0.9);
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px;
+}
+
+#input {
+margin: 5px;
+border: none;
+color: #c6a0f6; /* Gaiši violets teksts ievadei */
+background-color: rgba(30, 30, 30, 0.5);
+border-bottom: 2px solid #8839ef;
+}
+
+#inner-box {
+margin: 5px;
+border: none;
+background-color: transparent;
+}
+
+#outer-box {
+margin: 5px;
+border: none;
+background-color: transparent;
+}
+
+#scroll {
+margin: 0px;
+border: none;
+}
+
+#text {
+margin: 5px;
+border: none;
+color: #ffffff;
+}
+
+#entry:selected {
+/* Violeta fona izgaismojums izvēlētajam elementam */
+background-color: rgba(136, 57, 239, 0.2);
+border-radius: 5px;
+outline: none;
+}
+
+#text:selected {
+color: #c6a0f6;
+font-weight: bold;
+/* Violetais neon glow efekts tekstam */
+text-shadow: 0px 0px 5px #8839ef;
+}

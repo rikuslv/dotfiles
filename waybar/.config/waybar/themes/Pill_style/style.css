@@ -1,0 +1,63 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+/* Kopējais stils visām kapsulām */
+#clock,
+#custom-playerctl,
+#workspaces,
+#pulseaudio,
+#network,
+#battery {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 0px 15px;
+    border-radius: 20px;
+    border: 2px solid #7c4dff; /* Tavs purple border */
+    margin: 5px 0px;
+}
+
+/* Darba virsmu stils */
+#workspaces button {
+    padding: 0px 5px;
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    color: #7c4dff;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    color: #ff5555;
+}
+
+/* Specifiski pielāgojumi moduļiem */
+#custom-playerctl {
+    color: #a6e3a1; /* Zaļganīgs teksts mūzikai kā paraugā */
+    font-style: italic;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+#battery.critical {
+    color: #ff5555;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to { background-color: #ff5555; color: #111111; }
+}

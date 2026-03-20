@@ -1,0 +1,6 @@
+.git/
+*.node
+*.log
+discord/
+spotify/
+VirtualBox/

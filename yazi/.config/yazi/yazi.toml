@@ -1,0 +1,27 @@
+# Updated configuration for Yazi v0.3+
+
+[opener]
+edit = [
+    { run = '${EDITOR:-vim} "$@"', block = true, desc = "Edit" }
+]
+
+open = [
+    { run = 'xdg-open "$@"', desc = "Open" }
+]
+pdf = [
+    { run = 'zathura "$@"', desc = "Zathura" }
+]
+
+image = [
+    { run = 'mirage "$@"', detach = true, desc = "Mirage" }
+]
+
+[open]
+rules = [
+ 
+    { mime = "image/*", use = "image" },
+    
+    { name = "*.pdf", use = "pdf" },
+    { mime = "text/*", use = "edit" },
+    { mime = "*", use = "open" }
+]
