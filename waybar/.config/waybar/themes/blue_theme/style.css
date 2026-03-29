@@ -1,0 +1,45 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#workspaces, #clock, #pulseaudio, #network, #battery, #custom-logout, #custom-reboot, #custom-quit {
+    /* Nedaudz tumšāks dūmakains stikls (balts ar pelēku piegaršu) */
+    background-color: rgba(60, 60, 75, 0.4); 
+    color: #ffffff; /* Atgriežam balto tekstu, jo fons tagad ir tumšāks */
+    border-radius: 12px;
+    padding: 0 15px;
+    margin: 5px 3px;
+    /* Spīdīga zila apmale, kas saskan ar zobena gaismu */
+    border: 1px solid rgba(0, 242, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Aktīvā darba virsma - izteikts Cyan zils spīdums */
+#workspaces button.active {
+    color: #00f2ff;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.8);
+    background: transparent;
+}
+
+/* Pulkstenis - nedaudz tumšāks, lai izceltos centrā */
+#clock {
+    background-color: rgba(30, 30, 46, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Audio - saglabājam zilo akcentu */
+#pulseaudio {
+    border: 1px solid #00f2ff;
+}
+
+/* Power pogas - dūmakaini sarkans */
+#custom-quit {
+    background-color: rgba(255, 50, 50, 0.3);
+    border: 1px solid rgba(255, 50, 50, 0.5);
+}

@@ -25,6 +25,12 @@
             "key": "󰣇 hname",
             "keyColor": "blue"
         },
+	{
+  	  "type": "shell",
+    	  "key": "󰃭 OS Birth   ",
+    	  "keyColor": "35",
+	  "format": "2026-01-09" 
+	},
         {
             "type": "uptime",
             "key": "󱎫 uptime",

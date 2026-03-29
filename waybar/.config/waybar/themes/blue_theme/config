@@ -1,0 +1,34 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 10,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "battery", "custom/logout", "custom/reboot", "custom/quit"],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate"
+    },
+    "clock": { "format": " {:%H:%M | %d %b}" },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Muted",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "  "]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "scroll-step": 5
+    },
+    "network": { "format-wifi": "  {essid}" },
+    "battery": { "format": "{icon} {capacity}%", "format-icons": [" ", " ", " ", " ", " "] },
+    "custom/logout": { "format": "󰍃", "on-click": "hyprctl dispatch exit" },
+    "custom/reboot": { "format": "󰜉", "on-click": "reboot" },
+    "custom/quit": { "format": "", "on-click": "poweroff" }
+}
