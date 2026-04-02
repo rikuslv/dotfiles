@@ -1,0 +1,14 @@
+* { all: unset; font-family: "JetBrainsMono Nerd Font", sans-serif; }
+.clock-layout { padding: 20px; }
+.time-text { font-size: 100px; font-weight: bold; color: #ffffff; }
+.date-text { font-size: 30px; color: rgba(255, 255, 255, 0.6); }
+.sidebar-box { background-color: #111111; border-left: 3px solid #ffb6c1; padding: 25px; min-height: 2000px; }
+.power-row button { background-color: #ffb6c1; color: #111; border-radius: 25px; padding: 12px 25px; margin: 5px; font-size: 24px; }
+.slider-box { padding: 10px 0; }
+.slider-icon { font-size: 24px; color: #ffb6c1; margin-right: 15px; }
+scale trough { background-color: #333; border-radius: 10px; min-height: 12px; min-width: 200px; }
+scale highlight { background-color: #ffb6c1; border-radius: 10px; }
+.music-box { padding: 15px; background-color: rgba(255, 182, 193, 0.05); border-radius: 15px; }
+.music-btns button { font-size: 30px; color: #ffb6c1; }
+.notif-title { font-weight: bold; color: #ffb6c1; margin-bottom: 15px; font-size: 20px; }
+.trigger-visual { background-color: transparent; }

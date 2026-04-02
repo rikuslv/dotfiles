@@ -1,0 +1,54 @@
+(defpoll time :interval "1s" "date +%H:%M")
+(defpoll date :interval "1m" "date +\"%A, %d. %B\"")
+(defpoll notifications :interval "2s" "dunstctl history | jq '.data[0][0].summary.data' -r || echo 'Nav jaunu paziņojumu'")
+(defpoll volume :interval "1s" "pamixer --get-volume")
+(defpoll brightness :interval "1s" "brightnessctl i | grep -oP \"\(.*%\)\" | tr -d \"()%\"")
+(defpoll music_title :interval "1s" "playerctl metadata --format \"{{ title }}\" || echo \"Klusums\"")
+(defpoll music_artist :interval "1s" "playerctl metadata --format \"{{ artist }}\" || echo \"Nekas neskan\"")
+
+(defwindow clock
+  :monitor 0
+  :geometry (geometry :x "8%" :y "55%" :width "600px" :height "300px" :anchor "top right")
+  :stacking "bottom"
+  :exclusive false
+  :focusable false
+  (box :orientation "v" :space-evenly false :class "clock-layout"
+    (label :text time :halign "end" :class "time-text")
+    (label :text date :halign "end" :class "date-text")))
+
+(defwindow sidebar
+  :monitor 0
+  :geometry (geometry :x "0px" :y "0px" :width "320px" :height "100%" :anchor "top right")
+  :stacking "fg"
+  (eventbox :onhoverlost "eww close sidebar"
+    (box :class "sidebar-box" :orientation "v" :space-evenly false
+         (box :class "power-row" :orientation "h" :space-evenly true :halign "center"
+              (button :class "btn-logout" :onclick "loginctl terminate-user $USER" "󰍃")
+              (button :class "btn-reboot" :onclick "reboot" "󰜉")
+              (button :class "btn-power"  :onclick "shutdown now" "󰐥"))
+         (label :class "sep" :text "──────────────")
+         (box :class "slider-box" :orientation "h" :space-evenly false
+              (label :class "slider-icon" :text "󰕾")
+              (scale :class "vol-bar" :value volume :orientation "h" :max 101 :min 0 :onchange "pamixer --set-volume {}"))
+         (box :class "slider-box" :orientation "h" :space-evenly false
+              (label :class "slider-icon" :text "󰃠")
+              (scale :class "bright-bar" :value brightness :orientation "h" :max 101 :min 0 :onchange "brightnessctl set {}%"))
+         (label :class "sep" :text "──────────────")
+         (box :class "music-box" :orientation "v" :space-evenly false
+              (label :class "music-title" :text music_title :limit-width 25)
+              (label :class "music-artist" :text music_artist :limit-width 30)
+              (box :orientation "h" :space-evenly true :class "music-btns"
+                   (button :onclick "playerctl previous" "󰒮")
+                   (button :onclick "playerctl play-pause" "󰐊")
+                   (button :onclick "playerctl next" "󰒭")))
+         (label :class "sep" :text "──────────────")
+         (scroll :vexpand true
+                 (box :class "notif-box" :orientation "v" :space-evenly false
+                      (label :text "Paziņojumi" :class "notif-title")
+                      (label :text notifications :wrap true :xalign 0))))))
+
+(defwindow sidebar_trigger
+  :monitor 0
+  :geometry (geometry :x "0px" :y "0px" :width "20px" :height "100%" :anchor "top right")
+  :stacking "fg"
+  (eventbox :onhover "eww open sidebar" (box :class "trigger-visual")))

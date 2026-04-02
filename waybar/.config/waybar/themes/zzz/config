@@ -1,0 +1,17 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 46,
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["custom/music"],
+    "modules-right": ["pulseaudio", "network", "clock"],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": { "active": "", "default": "" },
+        "persistent-workspaces": { "*": 2 }
+    },
+    "custom/music": { "format": "󰝚  {}", "exec": "playerctl metadata --format '{{ title }}' || echo 'Nothing'", "interval": 5 },
+    "clock": { "format": "󰃰  {:%H:%M  •  %d/%m}" },
+    "pulseaudio": { "format": "{icon} {volume}%", "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] } }
+}
