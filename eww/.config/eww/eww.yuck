@@ -1,4 +1,4 @@
-(defpoll cpu_temp :interval "2s" "sensors | grep -m1 'Package id 0' | awk '{print $4}' | tr -d '+°C'")
+(defpoll cpu_temp :interval "2s" "sensors | grep -E '(Package id 0|Tctl|Tdie)' | awk '{print $2}' | tr -d '+°C' | head -n1")
 (defpoll gpu_usage :interval "2s" "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits || echo 0")
 (defpoll volume :interval "1s" "pamixer --get-volume")
 (defpoll brightness :interval "1s" "brightnessctl i | grep -oP '\(\d+%\)' | tr -d '()%'")
