@@ -12,7 +12,7 @@ done
 # Palaižam rofi
 SELECTED_WALL=$(echo -e "$LIST" | rofi -dmenu \
     -i \
-    -p "Tapete" \
+    -p "Background:" \
     -theme ~/.config/rofi/wallpaper-launcher.rasi)
 
 # Ja nekas netika izvēlēts, izejam
@@ -22,6 +22,6 @@ SELECTED_WALL=$(echo -e "$LIST" | rofi -dmenu \
 FULL_PATH="$WALLPAPER_DIR/$SELECTED_WALL"
 
 # Iestatām tapeti un krāsas
-swww img "$FULL_PATH" --transition-type center
+awww img "$FULL_PATH" --transition-type center
 wal -i "$FULL_PATH"
 pkill -USR2 waybar
