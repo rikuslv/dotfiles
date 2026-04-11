@@ -37,7 +37,7 @@ Terminal: Kitty
 
 Runner: Rofi / Wofi
 
-Tools: Fastfetch, Btop, Yazi, Wal, Flameshot, Wlogout
+Tools: Fastfetch, Btop, Yazi, Wal, Flameshot, Wlogout, awww
 
 ##  Showcase
 [Click here to watch the setup video](showcase.mp4)
