@@ -20,11 +20,12 @@ git clone https://github.com/rikuslv/dotfiles.git
 cd ~/dotfiles
 ```
 ## 3. Deploy configurations with Stow
-```
+
 This command will create symlinks for all folders in this directory:
 ```
 stow */
-Note: If you get "already exists" errors, use stow --adopt */ to link existing files.
+```
+Note: If you get "already exists" errors, use ```stow --adopt */``` to link existing files.
 ```
 stow --adopt */
 ```
@@ -37,7 +38,7 @@ Terminal: Kitty
 
 Runner: Rofi / Wofi
 
-Tools: Fastfetch, Btop, Yazi, Wal, Flameshot, Wlogout
+Tools: Fastfetch, Btop, Yazi, Wal, Flameshot, Wlogout, awww
 
 ##  Showcase
 [Click here to watch the setup video](showcase.mp4)
