@@ -1,7 +1,7 @@
 {
     "name": "Untitled",
     "DesktopAudioDevice1": {
-        "prev_ver": 536936448,
+        "prev_ver": 536936450,
         "name": "Desktop Audio",
         "uuid": "b7115602-6c9d-47ad-ab1e-8be027529498",
         "id": "pulse_output_capture",
@@ -32,7 +32,7 @@
         "private_settings": {}
     },
     "AuxAudioDevice1": {
-        "prev_ver": 536936448,
+        "prev_ver": 536936450,
         "name": "Mic/Aux",
         "uuid": "c9654571-adb5-4efc-82ea-568565b24d66",
         "id": "pulse_input_capture",
@@ -63,7 +63,7 @@
         "private_settings": {},
         "filters": [
             {
-                "prev_ver": 536936448,
+                "prev_ver": 536936450,
                 "name": "Noise Gate",
                 "uuid": "2d680d9d-4eea-4bc7-8d80-bec411f3e592",
                 "id": "noise_gate_filter",
@@ -91,7 +91,7 @@
                 "private_settings": {}
             },
             {
-                "prev_ver": 536936448,
+                "prev_ver": 536936450,
                 "name": "Compressor",
                 "uuid": "13ac9603-befa-4ca9-ae42-45db6cc39bc0",
                 "id": "compressor_filter",
@@ -121,7 +121,7 @@
                 "private_settings": {}
             },
             {
-                "prev_ver": 536936448,
+                "prev_ver": 536936450,
                 "name": "Noise Suppression",
                 "uuid": "0c8a8936-dde8-490d-856f-5db98d416543",
                 "id": "noise_suppress_filter",
@@ -151,7 +151,7 @@
     },
     "sources": [
         {
-            "prev_ver": 536936448,
+            "prev_ver": 536936450,
             "name": "Screen Capture (PipeWire)",
             "uuid": "130e2a52-7b04-4b7d-8c28-905b63c583ba",
             "id": "pipewire-screen-capture-source",
@@ -177,7 +177,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936448,
+            "prev_ver": 536936450,
             "name": "Image",
             "uuid": "17137808-a5d5-4f15-9ad3-9bc4c52b681a",
             "id": "image_source",
@@ -205,7 +205,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936448,
+            "prev_ver": 536936450,
             "name": "Scene",
             "uuid": "9bce291d-91c7-4974-9746-9d0dfe7ae602",
             "id": "scene",
@@ -294,7 +294,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936448,
+            "prev_ver": 536936450,
             "name": "start",
             "uuid": "cacfcd38-3585-4ee5-bd34-3511d19e1f0d",
             "id": "scene",
@@ -392,8 +392,8 @@
             "name": "Scene"
         }
     ],
-    "current_scene": "start",
-    "current_program_scene": "start",
+    "current_scene": "Scene",
+    "current_program_scene": "Scene",
     "canvases": [],
     "current_transition": "Fade",
     "transition_duration": 300,
